@@ -27,7 +27,7 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
             listaregistrada = new ArrayList<Usuario>();
         }
 
-
+        //esto es un comentario
     }
 
     public void regresar(){
