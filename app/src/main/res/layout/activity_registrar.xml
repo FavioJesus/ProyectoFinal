@@ -65,6 +65,59 @@
                 android:padding="8dp"
                 android:textColor="@color/letra" />
 
+            <EditText
+                android:id="@+id/txt_telefono"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/editpp"
+                android:layout_marginTop="40dp"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:drawableTint="@color/letra"
+                android:drawablePadding="10dp"
+                android:hint="Telefono "
+                android:padding="8dp"
+                android:textColor="@color/letra" />
+
+            <EditText
+                android:id="@+id/txt_facultad"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/editpp"
+                android:layout_marginTop="40dp"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:drawableTint="@color/letra"
+                android:drawablePadding="10dp"
+                android:hint="Facultad"
+                android:padding="8dp"
+                android:textColor="@color/letra" />
+
+            <EditText
+                android:id="@+id/txt_Carrera"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/editpp"
+                android:layout_marginTop="40dp"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:drawableTint="@color/letra"
+                android:drawablePadding="10dp"
+                android:hint="Carrera"
+                android:padding="8dp"
+                android:textColor="@color/letra" />
+
+            <EditText
+                android:id="@+id/txt_nivelacademico"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/editpp"
+                android:layout_marginTop="40dp"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:drawableTint="@color/letra"
+                android:drawablePadding="10dp"
+                android:hint="Nivel Academico"
+                android:padding="8dp"
+                android:textColor="@color/letra" />
+
+
             <Spinner
                 android:id="@+id/sp_sexo"
                 android:layout_width="match_parent"
