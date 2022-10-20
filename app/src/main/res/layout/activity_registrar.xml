@@ -7,11 +7,17 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:gravity="center"
+    android:layout_margin="20dp"
     android:orientation="vertical"
-    android:layout_margin="54dp"
     tools:context=".RegistrarActivity">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
     <TextView
+
         android:id="@+id/registrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,7 +27,19 @@
         android:textSize="36sp"
         android:textStyle="bold" />
 
-    <EditText
+        <ScrollView
+            android:layout_margin="20dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <EditText
                 android:id="@+id/txt_nombres"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -34,8 +52,6 @@
                 android:padding="8dp"
                 android:textColor="@color/letra"
                 android:textColorHighlight="@color/cardview_dark_background" />
-
-
 
             <EditText
                 android:id="@+id/txt_apellidos"
@@ -56,11 +72,11 @@
                 android:id="@+id/txt_email"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/editpp"
                 android:layout_marginTop="40dp"
+                android:background="@drawable/editpp"
                 android:drawableLeft="@drawable/ic_baseline_email_24"
-                android:drawableTint="@color/letra"
                 android:drawablePadding="10dp"
+                android:drawableTint="@color/letra"
                 android:hint="Correo"
                 android:padding="8dp"
                 android:textColor="@color/letra" />
@@ -69,11 +85,11 @@
                 android:id="@+id/txt_telefono"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/editpp"
                 android:layout_marginTop="40dp"
+                android:background="@drawable/editpp"
                 android:drawableLeft="@drawable/ic_baseline_email_24"
-                android:drawableTint="@color/letra"
                 android:drawablePadding="10dp"
+                android:drawableTint="@color/letra"
                 android:hint="Telefono "
                 android:padding="8dp"
                 android:textColor="@color/letra" />
@@ -82,11 +98,11 @@
                 android:id="@+id/txt_facultad"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/editpp"
                 android:layout_marginTop="40dp"
+                android:background="@drawable/editpp"
                 android:drawableLeft="@drawable/ic_baseline_email_24"
-                android:drawableTint="@color/letra"
                 android:drawablePadding="10dp"
+                android:drawableTint="@color/letra"
                 android:hint="Facultad"
                 android:padding="8dp"
                 android:textColor="@color/letra" />
@@ -95,11 +111,11 @@
                 android:id="@+id/txt_Carrera"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/editpp"
                 android:layout_marginTop="40dp"
+                android:background="@drawable/editpp"
                 android:drawableLeft="@drawable/ic_baseline_email_24"
-                android:drawableTint="@color/letra"
                 android:drawablePadding="10dp"
+                android:drawableTint="@color/letra"
                 android:hint="Carrera"
                 android:padding="8dp"
                 android:textColor="@color/letra" />
@@ -108,15 +124,14 @@
                 android:id="@+id/txt_nivelacademico"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/editpp"
                 android:layout_marginTop="40dp"
+                android:background="@drawable/editpp"
                 android:drawableLeft="@drawable/ic_baseline_email_24"
-                android:drawableTint="@color/letra"
                 android:drawablePadding="10dp"
+                android:drawableTint="@color/letra"
                 android:hint="Nivel Academico"
                 android:padding="8dp"
                 android:textColor="@color/letra" />
-
 
             <Spinner
                 android:id="@+id/sp_sexo"
@@ -135,13 +150,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="40dp"
-                android:background="@drawable/editpp"
                 android:autofillHints="Estado civil"
+                android:background="@drawable/editpp"
                 android:entries="@array/estadocivil"
                 android:textAlignment="textStart"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
 
 
             <EditText
@@ -151,8 +165,8 @@
                 android:layout_marginTop="40dp"
                 android:background="@drawable/editpp"
                 android:drawableLeft="@drawable/ic_baseline_lock_24"
-                android:drawableTint="@color/letra"
                 android:drawablePadding="8dp"
+                android:drawableTint="@color/letra"
                 android:hint="Contraseña"
                 android:padding="8dp"
                 android:textColor="@color/letra"
@@ -160,41 +174,38 @@
 
 
 
+            <Button
+                android:id="@+id/btn_regresarregistro"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="30dp"
+                android:backgroundTint="@color/orange"
+                android:text="Regresar"
+                android:textSize="18sp"
+                app:cornerRadius="20dp"
+                />
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:orientation="horizontal"
-                android:padding="24dp">
-
-                <Button
-                    android:id="@+id/btn_regresarregistro"
-                    android:layout_width="250dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginHorizontal="30dp"
-                    android:backgroundTint="@color/orange"
-                    android:text="Regresar"
-                    android:textSize="18sp"
-                    app:cornerRadius="20dp"
-                    />
-
-
-                <Button
-                    android:id="@+id/btn_registrar"
-                    android:layout_width="250dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginHorizontal="30dp"
-                    android:backgroundTint="@color/orange"
-                    android:text="Registrar"
-                    android:textSize="18sp"
-                    app:cornerRadius="20dp" />
+            <Button
+                android:id="@+id/btn_registrar"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="30dp"
+                android:backgroundTint="@color/orange"
+                android:text="Registrar"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
 
 
         </LinearLayout>
 
 
+        </ScrollView>
+
+
+
+</LinearLayout>
 
 </LinearLayout>
