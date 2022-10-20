@@ -120,18 +120,16 @@
                 android:padding="8dp"
                 android:textColor="@color/letra" />
 
-            <EditText
-                android:id="@+id/txt_nivelacademico"
+            <Spinner
+                android:id="@+id/sp_nivelacademico"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="40dp"
+                android:autofillHints="Nivel Academico"
                 android:background="@drawable/editpp"
-                android:drawableLeft="@drawable/ic_baseline_email_24"
-                android:drawablePadding="10dp"
-                android:drawableTint="@color/letra"
-                android:hint="Nivel Academico"
-                android:padding="8dp"
-                android:textColor="@color/letra" />
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Spinner
                 android:id="@+id/sp_sexo"
