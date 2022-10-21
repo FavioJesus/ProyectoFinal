@@ -45,10 +45,11 @@
                     android:gravity="center"
                     android:paddingHorizontal="5dp"
                     android:paddingVertical="10dp"
-                    android:text="Hello Wrlds"
+                    android:text="Hola"
                     android:textColor="@color/black"></TextView>
 
                 <TextView
+                    android:id="@+id/txt_usuariologeado"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
@@ -133,7 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="272dp"
         android:layout_marginTop="536dp"
-        android:text="Regresar"
+        android:text="Salir"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

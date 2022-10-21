@@ -131,10 +131,6 @@ public class RegistrarActivity extends AppCompatActivity implements View.OnClick
 
     public void regresar(){
         Intent intent = new Intent(RegistrarActivity.this, MainActivity.class);
-        Bundle objBundle = new Bundle();
-        //System.out.println(listaregistrada);
-        objBundle.putSerializable("datos",listaregistrada);
-        intent.putExtras(objBundle);
         startActivity(intent);
         finish();
     }
