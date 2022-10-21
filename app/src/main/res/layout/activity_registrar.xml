@@ -120,41 +120,6 @@
                 android:padding="8dp"
                 android:textColor="@color/letra" />
 
-            <Spinner
-                android:id="@+id/sp_nivelacademico"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="40dp"
-                android:autofillHints="Nivel Academico"
-                android:background="@drawable/editpp"
-                android:textAlignment="textStart"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Spinner
-                android:id="@+id/sp_sexo"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="40dp"
-                android:autofillHints="Sexo"
-                android:background="@drawable/editpp"
-                android:entries="@array/sexousuario"
-                android:textAlignment="textStart"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Spinner
-                android:id="@+id/sp_estado"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="40dp"
-                android:autofillHints="Estado civil"
-                android:background="@drawable/editpp"
-                android:entries="@array/estadocivil"
-                android:textAlignment="textStart"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
 
             <EditText
                 android:id="@+id/txt_password"

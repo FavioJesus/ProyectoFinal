@@ -65,8 +65,7 @@ public class MyAdapter extends BaseAdapter {
         controles.lblemail.setText(String.valueOf(usuario.get(position).getEmail()));
         controles.lblnombres.setText(usuario.get(position).getNombres());
         controles.lblapellidos.setText(String.valueOf(usuario.get(position).getApellidos()));
-        controles.lblestado.setText(String.valueOf(usuario.get(position).getEstadocivil()));
-        controles.lblsexo.setText(String.valueOf(usuario.get(position).getSexo()));
+
 
 
         return convertView;

@@ -83,16 +83,7 @@
         android:id="@+id/signupText"
         android:textColor="@color/orange"
         android:layout_marginBottom="20dp"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:id="@+id/btn_listar"
-        android:text="Listar"
-        android:textColor="@color/orange"
-        android:textSize="18sp"
-        android:layout_marginTop="0dp"
-        android:backgroundTint="@color/white"
-        app:cornerRadius = "20dp"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="60dp"

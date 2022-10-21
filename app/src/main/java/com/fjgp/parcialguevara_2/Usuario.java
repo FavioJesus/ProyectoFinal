@@ -5,8 +5,9 @@ public class Usuario implements Serializable{
     String email;
     String nombres;
     String apellidos;
-    String sexo;
-    String estadocivil;
+    String telefono;
+    String facultad;
+    String carrera;
     String contrasena;
 
     public String getEmail() {
@@ -33,20 +34,28 @@ public class Usuario implements Serializable{
         this.apellidos = apellidos;
     }
 
-    public String getSexo() {
-        return sexo;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
-    public String getEstadocivil() {
-        return estadocivil;
+    public String getFacultad() {
+        return facultad;
     }
 
-    public void setEstadocivil(String estadocivil) {
-        this.estadocivil = estadocivil;
+    public void setFacultad(String facultad) {
+        this.facultad = facultad;
+    }
+
+    public String getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(String carrera) {
+        this.carrera = carrera;
     }
 
     public String getContrasena() {

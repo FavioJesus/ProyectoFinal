@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText txt_usuario;
     EditText txt_password;
     ArrayList<Usuario> listaregistrada;
-    Button btnregistrar,btnlistar,btningresar;
+    Button btnregistrar,btningresar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,20 +24,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         txt_password=(EditText) findViewById(R.id.txt_pass);
         btnregistrar=(Button)findViewById(R.id.btn_registrar_principal);
-        btnlistar=(Button)findViewById(R.id.btn_listar);
         btningresar=(Button)findViewById(R.id.btn_ingresar);
         btnregistrar.setOnClickListener(this);
-        btnlistar.setOnClickListener(this);
         btningresar.setOnClickListener(this);
 
-        Intent objIntent = getIntent();
-        Bundle objBundle = objIntent.getExtras();
-        if(objBundle != null){
-            ArrayList<Usuario> listarecibida = (ArrayList<Usuario>) objBundle.getSerializable("datos");
-            listaregistrada = listarecibida;
-        }else{
-            listaregistrada = new ArrayList<Usuario>();
-        }
+
 
 
     }
@@ -46,8 +37,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = new Intent(MainActivity.this, RegistrarActivity.class);
         Bundle objBundle = new Bundle();
         //System.out.println(listaregistrada);
-        objBundle.putSerializable("datos",listaregistrada);
-        intent.putExtras(objBundle);
         startActivity(intent);
         finish();
     }
@@ -114,9 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v==btnregistrar){
             registrar();
-        } else if  (v==btnlistar){
-            listar();
-        }else if  (v==btningresar){
+        } else if  (v==btningresar){
             ingresar();
         }
     }
