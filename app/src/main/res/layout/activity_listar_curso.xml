@@ -18,6 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:onClick="detalleCurso"
             android:src="@drawable/matematicas">
 
         </ImageView>
@@ -30,6 +31,7 @@
             android:layout_height="match_parent"
             android:layout_weight="3">
             <TextView
+                android:id="@+id/nombre_curso"
                 android:text="Nombre del Curso"
                 android:textColor="@color/black"
                 android:textSize="20dp"
@@ -39,6 +41,7 @@
 
             </TextView>
             <TextView
+                android:id="@+id/carrera_curso"
                 android:text="Carrera del curso"
                 android:textColor="@color/black"
                 android:layout_width="match_parent"
@@ -48,6 +51,7 @@
 
         </LinearLayout>
         <TextView
+            android:id="@+id/codigo_curso"
             android:paddingVertical="10dp"
             android:paddingHorizontal="5dp"
             android:background="@drawable/editpp"
