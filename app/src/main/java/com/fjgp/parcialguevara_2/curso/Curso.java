@@ -7,6 +7,9 @@ public class Curso {
     private String silabus;
     private String carrera;
 
+    public Curso() {
+    }
+
     public Curso(String nombre, String horario, String codigo, String silabus, String carrera) {
         this.nombre = nombre;
         this.horario = horario;

@@ -37,6 +37,8 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
     private CursoAdapter cursoAdapter;
     private ArrayList<Curso> cursos = new ArrayList<>();
 
+    private CursoAdapter.RecyclerViewClickListener listener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,7 +93,6 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
                                 String codigo  = dataSnapshot.child("codigo").getValue().toString();
                                 String horario = dataSnapshot.child("horario").getValue().toString();
                                 String silabu  = dataSnapshot.child("silabus").getValue().toString();
-
                                 cursos.add(
                                         new Curso(
                                                 nombre,
@@ -103,7 +104,8 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
                                 );
                                 System.out.println(cursos);
                             }
-                            cursoAdapter = new CursoAdapter(cursos, R.layout.activity_listar_curso, PrincipalActivity.this );
+                            setOnClickListener();
+                            cursoAdapter = new CursoAdapter(cursos, R.layout.activity_listar_curso, PrincipalActivity.this,listener );
                             recyclerView.setAdapter(cursoAdapter);
                         }
                     }
@@ -144,6 +146,22 @@ public class PrincipalActivity extends AppCompatActivity implements View.OnClick
         if  (v==btnregresar){
             regresar();
         }
+    }
+
+    private void setOnClickListener(){
+        listener = new CursoAdapter.RecyclerViewClickListener() {
+            @Override
+            public void onClick(View v, int position) {
+                System.out.println("Click en detalle curso");
+                Intent intent = new Intent(PrincipalActivity.this, perfil_curso.class);
+                Bundle objBundle = new Bundle();
+                //System.out.println(listaregistrada);
+                objBundle.putString("codigo_curso",cursos.get(position).getCodigo());
+                intent.putExtras(objBundle);
+                startActivity(intent);
+                finish();
+            }
+        };
     }
 
 }

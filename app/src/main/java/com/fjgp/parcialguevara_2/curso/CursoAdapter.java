@@ -1,28 +1,35 @@
 package com.fjgp.parcialguevara_2.curso;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.fjgp.parcialguevara_2.R;
+import com.fjgp.parcialguevara_2.listar_curso;
+import com.fjgp.parcialguevara_2.perfil_curso;
 
 import java.util.ArrayList;
 
-public class CursoAdapter extends RecyclerView.Adapter<CursoAdapter.CursoViewHolder> {
+public class CursoAdapter  extends RecyclerView.Adapter<CursoAdapter.CursoViewHolder> {
 
     private ArrayList<Curso> cursos;
     private int resources;
     Context context;
+    private RecyclerViewClickListener listener;
 
-    public CursoAdapter(ArrayList<Curso> cursos, int resources, Context context) {
+    public CursoAdapter(ArrayList<Curso> cursos, int resources, Context context, RecyclerViewClickListener listener) {
         this.cursos = cursos;
         this.resources = resources;
         this.context = context;
+        this.listener = listener;
     }
 
     @NonNull
@@ -65,17 +72,31 @@ public class CursoAdapter extends RecyclerView.Adapter<CursoAdapter.CursoViewHol
         return cursos.size();
     }
 
-    public static class CursoViewHolder extends RecyclerView.ViewHolder{
+    public class CursoViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
     TextView nombre, carrera, codigo;
     View view;
+    ImageView detalle;
 
         public CursoViewHolder(@NonNull View itemView) {
             super(itemView);
             this.view = itemView;
+            view.setOnClickListener(this);
             nombre  = (TextView) itemView.findViewById(R.id.nombre_curso);
             carrera = (TextView) itemView.findViewById(R.id.carrera_curso);
             codigo  = (TextView) itemView.findViewById(R.id.codigo_curso);
+            detalle = (ImageView) itemView.findViewById(R.id.detalle);
+
+
         }
+
+        @Override
+        public void onClick(View view) {
+            listener.onClick(view,getAdapterPosition());
+        }
+    }
+
+    public interface RecyclerViewClickListener{
+        void onClick(View v, int position);
     }
 }

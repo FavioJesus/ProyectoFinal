@@ -66,7 +66,7 @@ public class registrar_curso extends AppCompatActivity implements View.OnClickLi
                 carrera_curso
         );
 
-        referencia.child("Usuario").child(userID).child("Cursos").push().setValue(curso);
+        referencia.child("Usuario").child(userID).child("Cursos").child(codigo_curso).setValue(curso);
         regresar();
 
     }
