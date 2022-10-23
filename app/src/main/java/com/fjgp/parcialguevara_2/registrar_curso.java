@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.fjgp.parcialguevara_2.curso.Curso;
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,7 +36,7 @@ public class registrar_curso extends AppCompatActivity implements View.OnClickLi
         silabus = (EditText) findViewById(R.id.txt_Sillabus);
         carrera = (EditText) findViewById(R.id.txt_Carrera);
 
-        btn_registrar = (Button) findViewById(R.id.btn_registrar_curso);
+        btn_registrar = (Button) findViewById(R.id.btn_registrar_alumno);
         referencia = FirebaseDatabase.getInstance().getReference();
         user= FirebaseAuth.getInstance().getCurrentUser();
         reference= FirebaseDatabase.getInstance().getReference("Usuario");

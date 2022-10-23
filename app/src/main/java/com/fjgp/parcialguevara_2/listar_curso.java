@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,8 +17,8 @@ public class listar_curso extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listar_curso);
 
-        codigo = (TextView) findViewById(R.id.codigo_curso);
-        detalle = (ImageView) findViewById(R.id.detalle);
+        codigo = (TextView) findViewById(R.id.codigo_alumno);
+        detalle = (ImageView) findViewById(R.id.detalle1);
 
     }
 

@@ -14,7 +14,7 @@
 
         <TextView
 
-            android:id="@+id/registrar"
+            android:id="@+id/registrar_alumno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Registrar Alumno"
@@ -92,7 +92,7 @@
 
 
                 <Button
-                    android:id="@+id/btn_registrar_curso"
+                    android:id="@+id/btn_registrar_alumno"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="30dp"

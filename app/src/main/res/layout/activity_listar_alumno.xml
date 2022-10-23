@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".listar_curso">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/detalle1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:src="@drawable/matematicas">
+
+        </ImageView>
+
+        <LinearLayout
+            android:paddingHorizontal="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/apellido_alumno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apellido del alumno"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/nombre_alumno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="nombre  alumno"
+                android:textColor="@color/black">
+
+            </TextView>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/codigo_alumno"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="5dp"
+            android:background="@drawable/editpp"
+            android:text="codigo"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            >
+
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,8 +1,7 @@
-package com.fjgp.parcialguevara_2.curso;
+package com.fjgp.parcialguevara_2.alumno;
+
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,20 +12,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.fjgp.parcialguevara_2.R;
-import com.fjgp.parcialguevara_2.listar_curso;
-import com.fjgp.parcialguevara_2.perfil_curso;
+
 
 import java.util.ArrayList;
 
-public class CursoAdapter  extends RecyclerView.Adapter<CursoAdapter.CursoViewHolder> {
+public class AlumnoAdapter extends RecyclerView.Adapter<AlumnoAdapter.AlumnoViewHolder>{
 
-    private ArrayList<Curso> cursos;
+    private ArrayList<Alumno> alumnos;
     private int resources;
     Context context;
     private RecyclerViewClickListener listener;
 
-    public CursoAdapter(ArrayList<Curso> cursos, int resources, Context context, RecyclerViewClickListener listener) {
-        this.cursos = cursos;
+
+    public AlumnoAdapter(ArrayList<Alumno> alumnos, int resources, Context context, RecyclerViewClickListener listener) {
+        this.alumnos = alumnos;
         this.resources = resources;
         this.context = context;
         this.listener = listener;
@@ -34,7 +33,7 @@ public class CursoAdapter  extends RecyclerView.Adapter<CursoAdapter.CursoViewHo
 
     @NonNull
     @Override
-    public CursoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AlumnoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater
                 .from(
                         parent.getContext()
@@ -44,59 +43,61 @@ public class CursoAdapter  extends RecyclerView.Adapter<CursoAdapter.CursoViewHo
                         parent,
                         false
                 );
-        return new CursoViewHolder(view);
+        return new AlumnoViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CursoViewHolder holder, int position) {
-        Curso curso = cursos.get(position);
+    public void onBindViewHolder(@NonNull AlumnoViewHolder holder, int position) {
+        Alumno alumno = alumnos.get(position);
         holder
                 .nombre
                 .setText(
-                        curso.getNombre()
+                        alumno.getNombre()
                 );
         holder
-                .carrera
+                .apellido
                 .setText(
-                        curso.getCarrera()
+                        alumno.getApellido()
                 );
         holder
                 .codigo
                 .setText(
-                        curso.getCodigo()
+                        alumno.getCodigo()
                 );
+
     }
 
     @Override
     public int getItemCount() {
-        return cursos.size();
+        return alumnos.size();
     }
 
-    public class CursoViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class AlumnoViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        TextView nombre, carrera, codigo;
+        TextView nombre, apellido, codigo;
         View view;
         ImageView detalle;
 
-        public CursoViewHolder(@NonNull View itemView) {
+        public AlumnoViewHolder(@NonNull View itemView) {
             super(itemView);
+
             this.view = itemView;
             view.setOnClickListener(this);
-            nombre  = (TextView) itemView.findViewById(R.id.nombre_curso);
-            carrera = (TextView) itemView.findViewById(R.id.carrera_curso);
-            codigo  = (TextView) itemView.findViewById(R.id.codigo_curso);
-            detalle = (ImageView) itemView.findViewById(R.id.detalle);
-
-
+            nombre  = (TextView) itemView.findViewById(R.id.apellido_alumno);
+            apellido = (TextView) itemView.findViewById(R.id.nombre_alumno);
+            codigo  = (TextView) itemView.findViewById(R.id.codigo_alumno);
+            detalle = (ImageView) itemView.findViewById(R.id.detalle1);
         }
 
         @Override
-        public void onClick(View view) {
+        public void onClick(View v) {
             listener.onClick(view,getAdapterPosition());
+
         }
     }
 
     public interface RecyclerViewClickListener{
         void onClick(View v, int position);
     }
+
 }
