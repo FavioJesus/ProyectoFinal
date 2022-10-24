@@ -2,6 +2,7 @@ package com.fjgp.parcialguevara_2.curso;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -65,6 +66,14 @@ public class CursoAdapter  extends RecyclerView.Adapter<CursoAdapter.CursoViewHo
                 .setText(
                         curso.getCodigo()
                 );
+        String variable="Taller de tesis";
+        String nombre2=curso.getNombre();
+
+        if (nombre2.equals(variable)){
+            holder.itemView.setBackgroundColor(Color.RED);
+        }else {
+            holder.itemView.setBackgroundColor(Color.BLUE);
+        }
     }
 
     @Override
@@ -82,10 +91,12 @@ public class CursoAdapter  extends RecyclerView.Adapter<CursoAdapter.CursoViewHo
             super(itemView);
             this.view = itemView;
             view.setOnClickListener(this);
+
             nombre  = (TextView) itemView.findViewById(R.id.nombre_curso);
             carrera = (TextView) itemView.findViewById(R.id.carrera_curso);
             codigo  = (TextView) itemView.findViewById(R.id.codigo_curso);
             detalle = (ImageView) itemView.findViewById(R.id.detalle);
+
 
 
         }
