@@ -75,7 +75,7 @@ public class registro_alumno extends AppCompatActivity implements View.OnClickLi
 
     public boolean validarCampo(EditText campo){
         Boolean formularioIncorrecto = false;
-        if(campo.getText().equals("")){
+        if(campo.getText().toString().equals("")){
             formularioIncorrecto = true;
         }
         return formularioIncorrecto;
