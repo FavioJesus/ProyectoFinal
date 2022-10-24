@@ -2,22 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical"
     android:paddingTop="20dp"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     tools:context=".registro_nota_alumno">
 
     <LinearLayout
+        android:id="@+id/linearLayout7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
         android:layout_marginHorizontal="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="217dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -25,12 +24,11 @@
             android:layout_marginLeft="0dp"
             android:layout_marginTop="0dp"
             android:layout_marginRight="190dp"
-            android:textStyle="bold"
             android:text="Nota de Alumnos"
-            android:textColor="@color/black">
+            android:textColor="@color/black"
+            android:textStyle="bold">
 
         </TextView>
-
 
 
     </LinearLayout>
@@ -42,12 +40,11 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_weight="4"
         android:layout_marginHorizontal="20dp"
+        android:layout_weight="4"
         android:background="@drawable/persona_inicio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="20dp">
 
         <LinearLayout
             android:id="@+id/cuadrousuario"
@@ -63,7 +60,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/txt_nombrecurso"
+                    android:id="@+id/txt_nombrecurso1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="20dp"
@@ -76,22 +73,33 @@
                     android:textColor="@color/black"></TextView>
 
                 <TextView
-                    android:id="@+id/txt_nombreAlumno"
+                    android:id="@+id/txt_nombreAlumno1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:layout_marginHorizontal="20dp"
+                    android:gravity="center"
                     android:text="Nombre del Alumno "
                     android:textColor="@color/white">
 
                 </TextView>
 
                 <TextView
-                    android:id="@+id/txt_codigoalumno"
+                    android:id="@+id/txt_apellidoalumno1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
                     android:layout_marginHorizontal="20dp"
+                    android:gravity="center"
+                    android:text="Apellido del Alumno "
+                    android:textColor="@color/white">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txt_codigoalumno1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:gravity="center"
                     android:text="Codigo del Alumno "
                     android:textColor="@color/white">
 
@@ -121,149 +129,167 @@
         android:id="@+id/textView20"
         android:layout_width="73dp"
         android:layout_height="32dp"
-        android:layout_marginStart="96dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="344dp"
         android:text="nota 1"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="236dp" />
-
-    <TextView
-        android:id="@+id/txt_promedio"
-        android:layout_width="73dp"
-        android:layout_height="33dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="237dp"
-        tools:layout_editor_absoluteY="531dp" />
-
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="73dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="96dp"
-        android:text="final"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="494dp" />
-
-    <EditText
-        android:id="@+id/txt_nota2"
-        android:layout_width="73dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="279dp" />
-
-    <EditText
-        android:id="@+id/txt_nota1"
-        android:layout_width="73dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="240dp" />
-
-    <EditText
-        android:id="@+id/txt_nota3"
-        android:layout_width="73dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="320dp" />
-
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="73dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="96dp"
-        android:text="nota 4"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="350dp" />
-
-    <TextView
-        android:id="@+id/textView28"
-        android:layout_width="73dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="96dp"
-        android:text="nota 2"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="276dp" />
-
-    <EditText
-        android:id="@+id/txt_nota4"
-        android:layout_width="73dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="362dp" />
-
-    <EditText
-        android:id="@+id/txt_final"
-        android:layout_width="73dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="100dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="489dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView27"
         android:layout_width="73dp"
         android:layout_height="32dp"
-        android:layout_marginStart="96dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="260dp"
         android:text="nota 3"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="313dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/textView26"
         android:layout_width="73dp"
         android:layout_height="32dp"
-        android:layout_marginStart="96dp"
-        android:text="PP"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="402dp" />
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="216dp"
+        android:text="nota 4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="73dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="300dp"
+        android:text="nota 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="96dp"
+        android:text="final"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_nota1"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="344dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/txt_parcial"
         android:layout_width="73dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginEnd="100dp"
+        android:layout_marginBottom="136dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="445dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_nota2"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="300dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_nota3"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="260dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_pp"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="176dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_nota4"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="216dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_final"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="96dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_promedio"
+        android:layout_width="73dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="56dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="176dp"
+        android:text="PP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView24"
         android:layout_width="73dp"
         android:layout_height="32dp"
-        android:layout_marginStart="96dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="136dp"
         android:text="parcial"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="442dp" />
-
-    <TextView
-        android:id="@+id/txt_pp"
-        android:layout_width="73dp"
-        android:layout_height="33dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="237dp"
-        tools:layout_editor_absoluteY="402dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView22"
         android:layout_width="73dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="96dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="56dp"
         android:text="Promedio"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="531dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_guardar"
@@ -272,7 +298,7 @@
         android:text="guardar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="572dp" />
+        tools:layout_editor_absoluteY="591dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,12 +10,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.fjgp.parcialguevara_2.alumno.Alumno;
 import com.fjgp.parcialguevara_2.alumno.AlumnoAdapter;
 import com.fjgp.parcialguevara_2.curso.Curso;
-import com.fjgp.parcialguevara_2.curso.CursoAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -152,6 +150,8 @@ public class perfil_curso extends AppCompatActivity {
                 Bundle objBundle = new Bundle();
                 //System.out.println(listaregistrada);
                 objBundle.putString("codigo_alumno",alumnos.get(position).getCodigo());
+                objBundle.putString("codigo_curso",codigo_curso );
+                objBundle.putString("nombre_curso", nombre.getText().toString());
                 intent.putExtras(objBundle);
                 startActivity(intent);
                 finish();
