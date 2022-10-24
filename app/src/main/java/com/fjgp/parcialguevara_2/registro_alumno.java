@@ -64,7 +64,7 @@ public class registro_alumno extends AppCompatActivity implements View.OnClickLi
         alumnoobj.setCodigo(codigo_alumno);
         alumnoobj.setNombre(nombre_alumno);
         alumnoobj.setApellido(apellido_alumno);
-        alumnoobj.setEmail(apellido_alumno);
+        alumnoobj.setEmail(email_alumno);
         alumnoobj.setEvaluar(1);
         alumnoobj.setNt1("0");
         alumnoobj.setNt2("0");

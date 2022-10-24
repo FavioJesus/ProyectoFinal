@@ -215,6 +215,15 @@ public class perfil_curso extends AppCompatActivity {
         };
     }
 
+    public void regresar(View view){
+        Intent intent = new Intent(perfil_curso.this, PrincipalActivity.class);
+        //Bundle ObjBundle = new Bundle();
+        //ObjBundle.putString("codigo_curso",codigo_curso);
+        //intent.putExtras(objBundle);
+        startActivity(intent);
+        finish();
+    }
+
 
 
 
