@@ -68,11 +68,12 @@ public class CursoAdapter  extends RecyclerView.Adapter<CursoAdapter.CursoViewHo
                 );
         String variable="Taller de tesis";
         String nombre2=curso.getNombre();
-
+        int RGBBad = android.graphics.Color.rgb(255, 136, 119);
+        int RGBGood= android.graphics.Color.rgb(183, 216, 129);
         if (nombre2.equals(variable)){
-            holder.itemView.setBackgroundColor(Color.RED);
+            holder.itemView.setBackgroundColor(RGBBad);
         }else {
-            holder.itemView.setBackgroundColor(Color.BLUE);
+            holder.itemView.setBackgroundColor(RGBGood);
         }
     }
 
