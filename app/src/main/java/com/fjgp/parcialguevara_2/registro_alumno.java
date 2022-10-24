@@ -75,14 +75,8 @@ public class registro_alumno extends AppCompatActivity implements View.OnClickLi
         alumnoobj.setNtfinal("0");
         alumnoobj.setPromedioFinal("0");
 
-        Alumno alumno = new Alumno(
-                codigo_alumno,
-                nombre_alumno,
-                apellido_alumno,
-                email_alumno
-        );
 
-        referencia.child("Usuario").child(userID).child("Cursos").child(cod_curso).child("alumnos").child(codigo_alumno).setValue(alumno);
+        referencia.child("Usuario").child(userID).child("Cursos").child(cod_curso).child("alumnos").child(codigo_alumno).setValue(alumnoobj);
         regresar();
 
     }

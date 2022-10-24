@@ -156,6 +156,11 @@ public class registro_nota_alumno extends AppCompatActivity {
 
         reference.child(userID).child("Cursos").child(codigo_curso).child("alumnos").child(codigo_alumno).setValue(alumnoobj);
         Intent intent = new Intent(registro_nota_alumno.this, perfil_curso.class);
+        Bundle objBundle = new Bundle();
+        //System.out.println(listaregistrada);
+        //objBundle.putSerializable("datos",listaregistrada);
+        objBundle.putString("codigo_curso",codigo_curso);
+        intent.putExtras(objBundle);
         startActivity(intent);
         finish();
 
