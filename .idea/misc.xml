@@ -26,7 +26,7 @@
         <entry key="..\:/Users/Juan/UNFV/IX CICLO/PROYECTO INTEGRADOR EN DISPOSITIVOS MOVILES/ProyectoFinal/app/src/main/res/layout/activity_principal.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/Juan/UNFV/IX CICLO/PROYECTO INTEGRADOR EN DISPOSITIVOS MOVILES/ProyectoFinal/app/src/main/res/layout/activity_registrar_curso.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/Juan/UNFV/IX CICLO/PROYECTO INTEGRADOR EN DISPOSITIVOS MOVILES/ProyectoFinal/app/src/main/res/layout/activity_registro_alumno.xml" value="0.3619791666666667" />
-        <entry key="..\:/Users/Juan/UNFV/IX CICLO/PROYECTO INTEGRADOR EN DISPOSITIVOS MOVILES/ProyectoFinal/app/src/main/res/layout/activity_registro_nota_alumno.xml" value="0.33" />
+        <entry key="..\:/Users/Juan/UNFV/IX CICLO/PROYECTO INTEGRADOR EN DISPOSITIVOS MOVILES/ProyectoFinal/app/src/main/res/layout/activity_registro_nota_alumno.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/admin/Desktop/final-dispotivos/ProyectoFinal/app/src/main/res/layout/activity_informativo.xml" value="0.221875" />
         <entry key="..\:/Users/admin/Desktop/final-dispotivos/ProyectoFinal/app/src/main/res/layout/activity_listar.xml" value="0.221875" />
         <entry key="..\:/Users/admin/Desktop/final-dispotivos/ProyectoFinal/app/src/main/res/layout/activity_listar_curso.xml" value="0.221875" />
@@ -36,7 +36,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

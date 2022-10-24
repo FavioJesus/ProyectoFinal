@@ -30,7 +30,7 @@ public class registro_nota_alumno extends AppCompatActivity {
 
     private FirebaseUser user;
     private DatabaseReference reference;
-    private String codigo_curso, codigo_alumno, nombre_curso;
+    private String codigo_curso, codigo_alumno, nombre_curso,correo_alumno,apellidos_alumno,nombres_alumno;
     private TextView nombre, apellido, codigo, curso;
 
     private EditText nota1, nota2, nota3, nota4, notaParcial, notaFinal;
@@ -52,6 +52,10 @@ public class registro_nota_alumno extends AppCompatActivity {
 
         user= FirebaseAuth.getInstance().getCurrentUser();
         codigo_curso =  getIntent().getStringExtra("codigo_curso");
+        nombres_alumno =  getIntent().getStringExtra("nombres_alumno");
+        apellidos_alumno =  getIntent().getStringExtra("apellidos_alumno");
+        correo_alumno =  getIntent().getStringExtra("correo_alumno");
+
         codigo_alumno = getIntent().getStringExtra("codigo_alumno");
         nombre_curso  = getIntent().getStringExtra("nombre_curso");
         userID = user.getUid();
@@ -86,13 +90,27 @@ public class registro_nota_alumno extends AppCompatActivity {
                     String nombre_alumno  =alumnos.getNombre();
                     String apellido_alumno =alumnos.getApellido();
                     String email_alumno =alumnos.getEmail();
-
+                    String nota1b=alumnos.getNt1();
+                    String nota2b=alumnos.getNt2();
+                    String nota3b=alumnos.getNt3();
+                    String nota4b=alumnos.getNt4();
+                    String notapp=alumnos.getPp();
+                    String notaep=alumnos.getNtparcial();
+                    String notaef=alumnos.getNtfinal();
+                    String notafinal=alumnos.getPromedioFinal();
 
                     nombre.setText(nombre_alumno);
                     apellido.setText(apellido_alumno);
                     codigo.setText(codigo_alumno);
                     curso.setText(nombre_curso);
-
+                    nota1.setText(nota1b);
+                    nota2.setText(nota2b);
+                    nota3.setText(nota3b);
+                    nota4.setText(nota4b);
+                    prom_p.setText(notapp);
+                    notaParcial.setText(notaep);
+                    notaFinal.setText(notaef);
+                    prom_f.setText(notafinal);
 
                 }
             }
@@ -120,19 +138,27 @@ public class registro_nota_alumno extends AppCompatActivity {
         String nota_final = notaFinal.getText().toString();
         String nota_promedio = prom_f.getText().toString();
 
+        Alumno alumnoobj=new Alumno();
+        alumnoobj.setCodigo(codigo_alumno);
+        alumnoobj.setNombre(nombres_alumno);
+        alumnoobj.setApellido(apellidos_alumno);
+        alumnoobj.setEmail(correo_alumno);
+        alumnoobj.setEvaluar(1);
+        alumnoobj.setNt1(nota_1);
+        alumnoobj.setNt2(nota_2);
+        alumnoobj.setNt3(nota_3);
+        alumnoobj.setNt4(nota_4);
+        alumnoobj.setPp(nota_pp);
+        alumnoobj.setNtparcial(nota_parcial);
+        alumnoobj.setNtfinal(nota_final);
+        alumnoobj.setPromedioFinal(nota_promedio);
 
-        Nota nota = new Nota(
-                nota_1,
-                nota_2,
-                nota_3,
-                nota_4,
-                nota_pp,
-                nota_parcial,
-                nota_final,
-                nota_promedio
-        );
 
-        reference.child(userID).child("Cursos").child(codigo_curso).child("alumnos").child(codigo_alumno).child("notas").setValue(nota);
+        reference.child(userID).child("Cursos").child(codigo_curso).child("alumnos").child(codigo_alumno).setValue(alumnoobj);
+        Intent intent = new Intent(registro_nota_alumno.this, perfil_curso.class);
+        startActivity(intent);
+        finish();
+
 
     }
 

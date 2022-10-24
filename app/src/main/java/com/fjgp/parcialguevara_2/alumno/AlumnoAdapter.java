@@ -12,6 +12,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.fjgp.parcialguevara_2.R;
+import com.fjgp.parcialguevara_2.perfil_curso;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 import java.util.ArrayList;
@@ -20,8 +28,10 @@ public class AlumnoAdapter extends RecyclerView.Adapter<AlumnoAdapter.AlumnoView
 
     private ArrayList<Alumno> alumnos;
     private int resources;
+
     Context context;
     private RecyclerViewClickListener listener;
+
 
 
     public AlumnoAdapter(ArrayList<Alumno> alumnos, int resources, Context context, RecyclerViewClickListener listener) {
@@ -29,6 +39,7 @@ public class AlumnoAdapter extends RecyclerView.Adapter<AlumnoAdapter.AlumnoView
         this.resources = resources;
         this.context = context;
         this.listener = listener;
+
     }
 
     @NonNull
@@ -64,6 +75,16 @@ public class AlumnoAdapter extends RecyclerView.Adapter<AlumnoAdapter.AlumnoView
                 .setText(
                         alumno.getCodigo()
                 );
+        int RGBNeutral = android.graphics.Color.rgb(189, 183, 107);
+
+        if (alumno.getEvaluar()==1){
+
+            holder.itemView.setBackgroundColor(RGBNeutral);
+        }else{
+            holder.itemView.setBackgroundColor(alumno.getEvaluar());
+        }
+
+
 
     }
 

@@ -60,6 +60,20 @@ public class registro_alumno extends AppCompatActivity implements View.OnClickLi
         String nombre_alumno  = nombre.getText().toString();
         String apellido_alumno  = apellido.getText().toString();
         String email_alumno = email.getText().toString();
+        Alumno alumnoobj=new Alumno();
+        alumnoobj.setCodigo(codigo_alumno);
+        alumnoobj.setNombre(nombre_alumno);
+        alumnoobj.setApellido(apellido_alumno);
+        alumnoobj.setEmail(apellido_alumno);
+        alumnoobj.setEvaluar(1);
+        alumnoobj.setNt1("0");
+        alumnoobj.setNt2("0");
+        alumnoobj.setNt3("0");
+        alumnoobj.setNt4("0");
+        alumnoobj.setPp("0");
+        alumnoobj.setNtparcial("0");
+        alumnoobj.setNtfinal("0");
+        alumnoobj.setPromedioFinal("0");
 
         Alumno alumno = new Alumno(
                 codigo_alumno,
