@@ -10,8 +10,7 @@ public class Nota {
     private String ntfinal;
     private String promedioFinal;
 
-    public Nota(){
-
+    public Nota() {
     }
 
     public Nota(String nt1, String nt2, String nt3, String nt4, String pp, String ntparcial, String ntfinal, String promedioFinal) {
@@ -80,4 +79,20 @@ public class Nota {
     public void setNtfinal(String ntfinal) {
         this.ntfinal = ntfinal;
     }
+
+    public String getPromedioFinal() {
+        return promedioFinal;
+    }
+
+    public void setPromedioFinal(String promedioFinal) {
+        this.promedioFinal = promedioFinal;
+    }
 }
+
+
+
+
+
+
+
+
