@@ -115,6 +115,7 @@ public class perfil_curso extends AppCompatActivity {
                                 String nota4 = dataSnapshot.child("nt4").getValue().toString();
                                 String examenparcial = dataSnapshot.child("ntparcial").getValue().toString();
                                 Float nota1fl=Float.parseFloat(nota1);
+
                                 Float nota2fl=Float.parseFloat(nota2);
                                 Float nota3fl=Float.parseFloat(nota3);
                                 Float nota4fl=Float.parseFloat(nota4);
